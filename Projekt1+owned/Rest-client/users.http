@@ -1,0 +1,71 @@
+@baseURL = http://localhost:3031
+@token = Bearer {{$dotenv JWT_TOKEN}}
+//@baseURL = https://wom22-ammar.azurewebsites.net/
+
+
+GET {{baseURL}}/
+
+
+###
+### 
+GET {{baseURL}}/users
+Authorization: {{token}}
+
+
+###
+### 
+GET {{baseURL}}/users/info
+Authorization: {{token}}
+
+
+###
+### MAKE NEW USER
+POST  {{baseURL}}/users
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "firstName": "Ammar",
+    "lastName": "Boss",
+    "email": "ammarTest@arcada.fi",
+    "password": "Password123"
+}
+
+
+### LOGIN
+POST  {{baseURL}}/users/login
+Content-Type: application/json
+
+{
+    "email": "ammarTest@arcada.fi",
+    "password": "Password123"
+}
+
+
+###
+### Aktivera user true
+PATCH {{baseURL}}/users/6332ead72092c8016c9b6a62
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "archived": true
+}
+
+
+###
+
+### Radera user 
+DELETE {{baseURL}}/users/63566bcfe4012dcc3c44f2f4
+Authorization: {{token}}
+
+
+###
+### Modifiera userdata en ting
+PUT {{baseURL}}/users/6332ead72092c8016c9b6a62
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "email": "test@arcada.soumi"
+}

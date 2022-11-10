@@ -1,0 +1,76 @@
+@baseURL = http://localhost:3031
+@token = Bearer {{$dotenv JWT_TOKEN}}
+###@baseURL = https://wom22-ammar.azurewebsites.net/
+
+
+###Get all users
+GET {{baseURL}}/users
+Authorization: {{token}}
+
+###
+### Get all cabins
+GET {{baseURL}}/cabins
+Authorization: {{token}}
+
+###
+### MAKE NEW Cabin
+POST  {{baseURL}}/cabins/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+
+    "address": " andra testen Oslo, Norge",
+    "size": "15M2",
+    "sauna": true,
+    "beach": false,
+    "price": "24Euro"
+}
+
+
+### 
+### Modify cabin info
+PATCH {{baseURL}}/cabins/635a29518c23281ee7555b7c
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "address": "dfggh 5 510192 Oslo, Norge"
+}
+
+###
+### Delete cabin  
+DELETE {{baseURL}}/cabins/6358fad016a0a150d0719e28
+Authorization: {{token}}
+
+
+###
+### Get all cabins owned
+GET {{baseURL}}/cabins/owned
+Authorization: {{token}}
+
+###
+### MAKE NEW Cabin owned
+POST  {{baseURL}}/cabins/owned
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    
+    "address": " Axeln 3, 00750 Helsingfors",
+    "size": "15M2",
+    "sauna": true,
+    "beach": false,
+    "price": "24Euro"
+   
+}
+
+
+###
+### Delete all cabin  
+DELETE {{baseURL}}/cabins/owned
+Authorization: {{token}}
+
+
+###
+

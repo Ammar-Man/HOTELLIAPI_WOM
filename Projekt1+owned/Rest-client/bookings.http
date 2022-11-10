@@ -1,0 +1,58 @@
+@baseURL = http://localhost:3031
+@token = Bearer {{$dotenv JWT_TOKEN}}
+###@baseURL = https://wom22-ammar.azurewebsites.net/
+
+
+###Get all users
+GET {{baseURL}}/users
+Authorization: {{token}}
+
+###
+### Get all cabins
+GET {{baseURL}}/cabins/
+Authorization: {{token}}
+
+###
+### Get all bookings
+GET {{baseURL}}/bookings/
+Authorization: {{token}}
+
+###
+### Get all bookings with cabinID
+GET {{baseURL}}/bookings/6363926dc9f8e4cda42c4029
+Authorization: {{token}}
+
+###
+### 6358fad016a0a150d0719e28
+### MAKE NEW booking
+POST  {{baseURL}}/bookings/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "cabin": "6358fd347f09ca51091308d8",
+    "startDate": "2023-11-26",
+    "endDate": "2023-12-26"
+}
+
+
+### 
+### Modify booking info
+PATCH {{baseURL}}/bookings/6363926dc9f8e4cda42c4029
+Content-Type: application/json
+Authorization: {{token}}
+
+{   
+    "cabin": "6358fad016a0a150d0719e28",
+    "startDate": "2027-11-26",
+    "endDate": "2028-10-26"
+}
+
+###
+### Delete booking  
+DELETE {{baseURL}}/bookings/63626f3f6478d67cc5b33e34
+Authorization: {{token}}
+
+
+###
+
