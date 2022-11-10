@@ -1,0 +1,45 @@
+#  @baseURL = http://localhost:3000
+@baseURL = https://wom22-part2-ammar.azurewebsites.net
+@token = Bearer {{$dotenv JWT_TOKEN}}
+###@baseURL = https://wom22-part2-ammar.azurewebsites.net
+
+
+
+###Get all orders
+GET {{baseURL}}/orders
+Authorization: {{token}}
+
+###
+### MAKE NEW Cabin
+POST  {{baseURL}}/orders/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    
+    "date": "2016-01-01",
+    "cabin": "oslogata 52, Norge Oslo",
+    "service": "cleaning"
+}
+
+
+### 
+### Modify cabin info
+PATCH {{baseURL}}/orders/636ccfbaa2e7124f8e010a2e
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+     "date": "2016-01-01",
+    "cabin": "oslogata 52, Norge Oslo",
+    "service": "cleaning"
+}
+
+###
+### Delete cabin  
+DELETE {{baseURL}}/orders/636cccf0eae87c5ae49da6cc
+Content-Type: application/json
+Authorization: {{token}}
+
+
+###

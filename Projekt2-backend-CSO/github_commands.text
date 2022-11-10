@@ -1,0 +1,24 @@
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: no email was given and auto-detection is disabled
+[2022-09-13T10:38:49.438Z] > git config --get-all user.name [47ms]
+[2022-09-13T10:38:56.561Z] > git status -z -uall [53ms]
+[2022-09-13T10:38:56.620Z] > git symbolic-ref --short HEAD [51ms]
+[2022-09-13T10:38:56.695Z] > git ls-files --stage -- D:\2023\P1\Webbtjänster och molnteknolog\-wom22-projekt-antkning\test.text [59ms]
+[2022-09-13T10:38:56.709Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [82ms]
+[2022-09-13T10:38:56.765Z] > git cat-file -s b23418e24881b62a68794ff149820670799a6580 [58ms]
+[2022-09-13T10:38:56.780Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [64ms]
+[2022-09-13T10:38:56.780Z] > git remote --verbose [54ms]
+[2022-09-13T10:38:56.832Z] > git config --get commit.template [43ms]
+[2022-09-13T10:38:56.836Z] > git show --textconv :test.text [57ms]
+
+git pull origin that_other_branch
+git branch //main*
+ git status
+
+ git checkout -b lektion-2

@@ -1,0 +1,33 @@
+git remote -v
+
+## Lektion2 install [REST Client v0.25.1]
+## install  node --version v16.16.0
+
+=> lekiton 2 commands. <=
+node --version
+npm --init
+npm start
+npm run
+
+npm i nodemon --save-day // install för att körar automatisk kommand updaterig när man ändrar ting på sever.js så uppdatarer 
+på terminalen.
+
+// starta nodemon och stänga med ctrl c
+ctrl c           // kommer ut från nodemon
+npm run dev      // starta nodemon
+npm i // starta från nytt dator då man installerar git projekt from github och sen installerar med npm i
+
+npm i express // install Express.js
+ipcongig sen ipv4 adress 192.168.239.1 samma som lockalhost:3030 //
+     för att se express commands som kommer från server.js
+
+//lektion 3 
+ npm i nodemon --save-dev // flytta nodemon till egen file i package.json
+npm i mongoose dotenv
+
+// lektion 5 
+npm i bcrypt // för att installera 
+npm i jsonwebtoken //
+terminal node require('crypto').randomBytes(32).toString('hex')
+out ctrl d
+

@@ -1,0 +1,41 @@
+#  @baseURL = http://localhost:3000
+@baseURL = https://wom22-part2-ammar.azurewebsites.net
+@token = Bearer {{$dotenv JWT_TOKEN}}
+###@baseURL = https://wom22-ammar.azurewebsites.net/
+
+
+###Get all orders
+GET {{baseURL}}/services
+Authorization: {{token}}
+
+###
+### MAKE NEW Cabin
+POST  {{baseURL}}/services/
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+
+    "service": "repairs"
+   
+}
+
+
+
+### 
+### Modify cabin info
+PATCH {{baseURL}}/services/635a29518c23281ee7555b7c
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "cleaning": "cleaning"
+}
+
+###
+### Delete cabin  
+DELETE {{baseURL}}/services/6358fad016a0a150d0719e28
+Authorization: {{token}}
+
+
+###
