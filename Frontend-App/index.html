@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTELLI API</title>
+</head>
+
+<body>
+    <h1>HOTELLI API</h1>
+  
+    <a href="http://./cabins"></a>
+  
+    <div id="logOutButton">
+       <a class="button button1" onclick="logOutUsers()">Logout</a>
+    </div>
+        
+        
+
+
+    <div>
+
+        <p id="demo"></p>
+    </div>
+
+   <!-- login check! -->
+    
+
+     <!-- Users info -->
+    <div class="notes" id="usersInfo">
+        <div id="login">
+            <input id="email">
+            <input type="password" id="password">
+            <input id="btn-login" type="button" value="login">
+        </div>
+       
+    </div>
+
+    <!-- Choose cabin and get send orders info -->
+    <div id="insertChooseCabin">
+        <div class="notes" id="chooseCabin">
+            <h2>Choose cabin</h2>
+            <div id="selectCabins">Not notes to show..</div>
+
+            <h2>Select Services</h2>
+            <div id="selectServices">Not notes to show..</div>
+
+            <div id="selectDate">
+                <h2> Select Date</h2>
+                
+                    <input type="date" id="selectedDate" name="birthday">
+                    <a class="button button1" onclick="sendOrders()">Send</a>
+                
+            
+            </div>
+            
+        </div>
+    </div>
+
+<!-- ordered services and get orders info -->
+    <div class="notes" id="insertOrderedServices">
+        <div  id="ordersInfo">
+            Not notes to show..
+
+        </div>
+        <div id="selectServicesBtn">
+            <a class="button button1" onclick="sendDeleteOS()">Delete</a>
+            <a class="button button1" onclick="fixChangeOrders()">Change</a>
+        </div>
+        <div id="changeFolder">
+            <div id="changeCabins"></div>
+            <div id="changeServices"></div>
+            <div id="changeDate"></div>
+            <div id="selectServicesBtn2"></div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script src="./assets/script.js"></script>
+<script src="./usersJS.js"></script>
