@@ -17,4 +17,6 @@ Email: ammarTest@arcada.fi Password: Password123
 
 I manage to solve all tasks according to project 2 and project 1 and everything works perfectly!
 
+The app takes a little time the first start because it is the free version just to demonstrate that everything works perfectly
+
 ![](img/1.png)
